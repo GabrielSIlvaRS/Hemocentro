@@ -46,6 +46,10 @@ export class sistemaHemocentro {
     for (const doador of this.doadores) {
       if (doador.getTipoSanguineo() === tipoSanguineo) {
         console.log(doador.mostrarInfo());
+        break;
+      }else{
+        console.log("Tipo sanguineo não encontrado!");
+        break;
       }
     }
     console.log('-----------------------------------------------------------------');
@@ -59,8 +63,10 @@ export class sistemaHemocentro {
     for (const doador of this.doadores) {
       if (doador.getDataUltimaDoacao() === data) {
         console.log(doador.mostrarInfo());
+        break;
       } else {
         console.log("Nenhuma data encontrada!")
+        break;
       }
     }
     console.log('-----------------------------------------------------------------');
